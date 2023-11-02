@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+<h1>Contact Details</h1>
+
+<div class="container">
+  <% if (contacts.length > 0) { %>
+    <% contacts.forEach(function(contact) { %>
+      <div class="contact-entry">
+        <ul>
+          <li><strong>Name:</strong> <%= contact.name %></li>
+          <li><strong>Email:</strong> <%= contact.email %></li>
+          <li><strong>Subject:</strong> <%= contact.subject %></li>
+          <li><strong>Message:</strong> <%= contact.message %></li>
+        </ul>
+        
+      </div>
+    <% }); %>
+  <% } else { %>
+    <p>No contact entries found.</p>
+  <% } %>
+</div>
+
+<%- include("partials/footer"); -%>
